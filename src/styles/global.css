@@ -1,0 +1,249 @@
+/* ==========================================================================
+   ESTILOS GLOBAIS — PORTFÓLIO ALEXSANDRO ALVES
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tipografia */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--text-primary);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* Seções */
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.section-dark {
+  background-color: var(--bg-projects-section);
+  color: var(--text-projects-primary);
+}
+
+.section-dark h2,
+.section-dark h3,
+.section-dark h4 {
+  color: var(--text-projects-primary);
+}
+
+.section-dark p {
+  color: var(--text-projects-secondary);
+}
+
+/* Tag / Eyebrow (idêntica à referência: ponto azul + texto maiúsculo) */
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.section-eyebrow .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-royal-blue);
+  display: inline-block;
+  box-shadow: 0 0 8px rgba(26, 86, 219, 0.5);
+}
+
+.section-dark .section-eyebrow {
+  color: var(--text-projects-secondary);
+}
+
+/* Título de Seção Principal */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 56px;
+  gap: 24px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.section-subtitle {
+  max-width: 460px;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 28px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--color-royal-blue);
+  color: #FFFFFF;
+  border: 1px solid var(--color-royal-blue);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-royal-blue-hover);
+  border-color: var(--color-royal-blue-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(26, 86, 219, 0.28);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-secondary);
+  border-color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.section-dark .btn-secondary {
+  color: var(--text-projects-primary);
+  border-color: var(--border-projects);
+}
+
+.section-dark .btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: var(--text-projects-primary);
+}
+
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  padding: 8px 0;
+  border-bottom: 1px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.btn-link:hover {
+  color: var(--color-royal-blue);
+  border-bottom-color: var(--color-royal-blue);
+}
+
+.section-dark .btn-link {
+  color: var(--text-projects-primary);
+}
+
+.section-dark .btn-link:hover {
+  color: var(--color-royal-blue);
+}
+
+/* Destaque em Azul */
+.highlight-blue {
+  color: var(--color-royal-blue);
+}
+
+/* Badges e Pílulas */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.badge-blue {
+  background-color: var(--color-royal-blue-light);
+  color: var(--color-royal-blue);
+}
+
+.badge-outline {
+  border: 1px solid var(--border-card);
+  color: var(--text-secondary);
+}
+
+/* Acessibilidade - Focus visible */
+:focus-visible {
+  outline: 2px solid var(--color-royal-blue);
+  outline-offset: 3px;
+}

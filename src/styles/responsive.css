@@ -1,0 +1,53 @@
+/* ==========================================================================
+   RESPONSIVIDADE — PORTFÓLIO ALEXSANDRO ALVES
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 20px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .btn {
+    padding: 12px 22px;
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-padding: 16px;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  .section-eyebrow {
+    font-size: 0.7rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
