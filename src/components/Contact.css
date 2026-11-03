@@ -1,0 +1,288 @@
+/* ==========================================================================
+   CONTACT — VAMOS CONVERSAR? (ESTILO EDITORIAL REFERÊNCIA)
+   ========================================================================== */
+
+.contact-section {
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Banner Superior de Contato */
+.contact-hero-banner {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background-color: var(--bg-card);
+  box-shadow: var(--shadow-card);
+  margin-bottom: 56px;
+}
+
+.contact-details-box {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+.contact-detail-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.detail-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-royal-blue-light);
+  color: var(--color-royal-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.detail-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.detail-value {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.link-hover:hover {
+  color: var(--color-royal-blue);
+}
+
+.copy-email-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.copy-email-btn:hover {
+  border-color: var(--color-royal-blue);
+  color: var(--color-royal-blue);
+}
+
+/* Bloco Azul Royal idêntico à referência */
+.contact-cta-highlight {
+  background-color: var(--color-royal-blue);
+  color: #FFFFFF;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-cta-highlight:hover {
+  background-color: var(--color-royal-blue-hover);
+}
+
+.cta-highlight-arrow {
+  transition: transform var(--transition-normal);
+}
+
+.contact-cta-highlight:hover .cta-highlight-arrow {
+  transform: translate(6px, -6px);
+}
+
+.cta-highlight-small {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  display: block;
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
+
+.cta-highlight-title {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+
+/* Grade de Redes Sociais Individuais */
+.social-channels-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.social-channels-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.social-channels-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.social-channels-sub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 22px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  position: relative;
+}
+
+.social-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(26, 86, 219, 0.45);
+  box-shadow: var(--shadow-hover);
+}
+
+.social-card-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-xs);
+  background-color: var(--bg-secondary);
+  color: var(--color-royal-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.social-card:hover .social-card-icon-wrap {
+  background-color: var(--color-royal-blue);
+  color: #FFFFFF;
+}
+
+.social-card-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.social-category {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.social-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 1px;
+}
+
+.social-user {
+  font-size: 0.74rem;
+  color: var(--color-royal-blue);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.social-card-arrow {
+  color: var(--text-muted);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.social-card:hover .social-card-arrow {
+  color: var(--color-royal-blue);
+  transform: translate(2px, -2px);
+}
+
+/* Responsividade Contact */
+@media (max-width: 1024px) {
+  .social-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .contact-hero-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-details-box {
+    padding: 28px 24px;
+  }
+
+  .contact-cta-highlight {
+    padding: 32px 24px;
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 540px) {
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-detail-row {
+    flex-wrap: wrap;
+  }
+
+  .copy-email-btn {
+    margin-left: auto;
+  }
+}

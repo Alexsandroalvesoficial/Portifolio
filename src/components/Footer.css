@@ -1,0 +1,196 @@
+/* ==========================================================================
+   FOOTER — RODAPÉ ELEGANTE EDITORIAL
+   ========================================================================== */
+
+.footer {
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--border-color);
+  padding: 80px 0 40px 0;
+  transition: background-color var(--transition-normal);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 56px;
+}
+
+/* Coluna Brand */
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo-img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.footer-tagline {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 360px;
+}
+
+/* Coluna Navegação */
+.footer-heading {
+  font-family: var(--font-display);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-link {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  display: inline-block;
+}
+
+.footer-link:hover {
+  color: var(--color-royal-blue);
+  transform: translateX(4px);
+}
+
+/* Coluna Contato Rápido */
+.footer-contact-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-email a,
+.footer-phone a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.footer-email a:hover,
+.footer-phone a:hover {
+  color: var(--color-royal-blue);
+}
+
+.footer-social-quick {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.footer-social-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.footer-social-icon:hover {
+  border-color: var(--color-royal-blue);
+  color: var(--color-royal-blue);
+  transform: translateY(-2px);
+}
+
+/* Divisória */
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-color);
+  margin-bottom: 32px;
+}
+
+/* Rodapé Inferior */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.footer-sub-copyright {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
+.footer-scroll-top-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  transition: all var(--transition-fast);
+}
+
+.footer-scroll-top-btn:hover {
+  color: var(--color-royal-blue);
+  border-color: var(--color-royal-blue);
+  transform: translateY(-2px);
+}
+
+/* Responsividade Footer */
+@media (max-width: 860px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+.footer-btn-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  text-align: left;
+}

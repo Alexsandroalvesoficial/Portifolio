@@ -1,0 +1,335 @@
+/* ==========================================================================
+   EDUCATION — FORMAÇÃO E LINHA DO TEMPO EDITORIAL
+   Inspirado diretamente na seção 'Work Experience' da referência
+   ========================================================================== */
+
+.education-section {
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.education-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 56px;
+  align-items: center;
+}
+
+/* Lado Esquerdo: Composição Visual */
+.education-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.education-image-container {
+  position: relative;
+  width: 330px;
+  height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.education-circle-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--color-royal-blue);
+  box-shadow: 0 14px 40px rgba(26, 86, 219, 0.28);
+  z-index: 1;
+}
+
+.education-image-mask {
+  position: relative;
+  z-index: 2;
+  width: 306px;
+  height: 306px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 4px solid var(--bg-primary);
+  background-color: #121319;
+}
+
+[data-theme="dark"] .education-image-mask {
+  border-color: var(--bg-card);
+}
+
+.education-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(15%);
+  transition: filter var(--transition-normal);
+}
+
+.education-image-container:hover .education-photo {
+  filter: grayscale(0%);
+}
+
+/* Lado Direito: Linha do Tempo */
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 140px 32px 1fr;
+  gap: 16px;
+  position: relative;
+}
+
+/* Coluna de Data/Período */
+.timeline-date-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: 4px;
+}
+
+.timeline-period {
+  font-family: var(--font-display);
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--color-royal-blue);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.timeline-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.status-ongoing {
+  background-color: rgba(26, 86, 219, 0.1);
+  color: var(--color-royal-blue);
+}
+
+.status-finished {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #059669;
+}
+
+[data-theme="dark"] .status-finished {
+  color: #34D399;
+}
+
+/* Coluna do Marcador & Linha Vertical */
+.timeline-marker-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--bg-primary);
+  border: 3px solid var(--color-royal-blue);
+  z-index: 2;
+  margin-top: 4px;
+  transition: transform var(--transition-fast);
+}
+
+.timeline-item:hover .timeline-dot {
+  transform: scale(1.3);
+  background-color: var(--color-royal-blue);
+}
+
+.timeline-connector {
+  position: absolute;
+  top: 18px;
+  bottom: -36px;
+  width: 2px;
+  background-color: var(--border-color);
+  z-index: 1;
+}
+
+/* Coluna do Conteúdo */
+.timeline-content-col {
+  padding-bottom: 8px;
+}
+
+.timeline-header {
+  margin-bottom: 8px;
+}
+
+.timeline-category {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.timeline-course {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.timeline-institution {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-royal-blue);
+  margin-top: 2px;
+}
+
+.timeline-description {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+.timeline-certificate-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--color-royal-blue);
+  margin-top: 10px;
+  padding: 4px 8px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-fast);
+}
+
+.timeline-certificate-link:hover {
+  background-color: var(--color-royal-blue-light);
+  border-color: var(--color-royal-blue);
+}
+
+/* Responsividade Education */
+@media (max-width: 992px) {
+  .education-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .education-visual {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline-item {
+    grid-template-columns: 24px 1fr;
+    gap: 16px;
+  }
+
+  .timeline-date-col {
+    grid-column: 2;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 6px;
+  }
+
+  .timeline-marker-col {
+    grid-row: 1 / 3;
+    grid-column: 1;
+  }
+
+  .timeline-content-col {
+    grid-column: 2;
+  }
+}
+
+/* Botão e Box CTA para a Página de Certificados */
+.education-cta-row {
+  margin-top: 16px;
+  padding-top: 24px;
+}
+
+.education-cta-box {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-sm);
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-fast);
+}
+
+.education-cta-box:hover {
+  border-color: rgba(26, 86, 219, 0.45);
+  box-shadow: var(--shadow-hover);
+}
+
+.cta-box-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cta-box-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-royal-blue-light);
+  color: var(--color-royal-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cta-box-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.cta-box-desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.btn-open-certificates {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .education-cta-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-open-certificates {
+    width: 100%;
+  }
+}

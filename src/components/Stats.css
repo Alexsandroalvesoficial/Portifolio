@@ -1,0 +1,106 @@
+/* ==========================================================================
+   STATS — FAIXA DE INDICADORES (ESTILO REFERÊNCIA)
+   ========================================================================== */
+
+.stats-section {
+  background-color: var(--bg-stats-band);
+  color: #FFFFFF;
+  padding: 42px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 5;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 12px;
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.stat-card:last-child {
+  border-right: none;
+}
+
+.stat-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background-color: rgba(26, 86, 219, 0.12);
+  color: var(--color-royal-blue);
+  flex-shrink: 0;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.stat-label.prominent {
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.stat-sublabel {
+  font-size: 0.72rem;
+  color: #9EA3B2;
+  margin-top: 2px;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .stat-card:nth-child(2) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 580px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .stat-card {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-bottom: 16px;
+  }
+
+  .stat-card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}

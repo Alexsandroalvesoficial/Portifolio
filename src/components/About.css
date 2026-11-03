@@ -1,0 +1,164 @@
+/* ==========================================================================
+   ABOUT — TRAJETÓRIA EDITORIAL
+   ========================================================================== */
+
+.about-section {
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: start;
+}
+
+/* Coluna de Narrativa */
+.about-narrative {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-paragraph {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+.about-quote-box {
+  margin-top: 16px;
+  padding: 28px 32px;
+  border-left: 3px solid var(--color-royal-blue);
+  background-color: var(--bg-secondary);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  position: relative;
+}
+
+.quote-mark {
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  color: var(--color-royal-blue);
+  line-height: 0.8;
+  display: block;
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
+
+.quote-text {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.quote-author {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-royal-blue);
+}
+
+/* Coluna de Pilares */
+.about-pillars {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-sm);
+  padding: 36px 32px;
+  box-shadow: var(--shadow-card);
+}
+
+.pillars-heading {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pillars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pillar-item {
+  display: flex;
+  gap: 18px;
+}
+
+.pillar-number {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-royal-blue);
+  opacity: 0.85;
+  flex-shrink: 0;
+}
+
+.pillar-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pillar-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.pillar-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.about-cta-card {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+}
+
+.cta-card-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.cta-icon {
+  color: var(--color-royal-blue);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.cta-card-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.cta-card-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+/* Responsividade About */
+@media (max-width: 900px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
